@@ -1,0 +1,583 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primary: #B1B1B1;
+    --secondary: #797979;
+    --tertiary: #606060;
+    --silver: #5A5A5A;
+    --bg-black: #020202;
+    --bg-page: #1E1E1E;
+    --yellow: #FCAF17;
+    --white: #ffffff;
+}
+
+body {
+    background-color: #101010;
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--yellow);
+    transition: color 0.3s ease;
+}
+
+.hamburger svg path {
+    stroke: currentColor;
+}
+
+.hamburger:hover {
+    color: #f1a20b;
+}
+
+.hamburger.active {
+    color: #f1a20b;
+}
+
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #101010;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+}
+
+.menu-mobile ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.menu-mobile li a {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.menu-mobile li a:hover {
+    color: #f1a20b;
+}
+
+/* Botão e ícones dentro do menu mobile ficam normais */
+.menu-mobile .btn-launcher,
+.menu-mobile .menu-opcoes {
+    margin-top: 10px;
+}
+
+/* Mostrar menu mobile quando clicado */
+.menu-mobile.open {
+    display: flex;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 29px;
+}
+
+.logo {
+    margin-right: 47px;
+}
+
+.menu-list {
+    display: flex;
+    margin-right: 522px;
+    gap: 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+    transition: color 0.3s ease;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+}
+
+.menu-list li:first-child a {
+    flex-direction: row-reverse;
+}
+
+.menu-list li a:hover {
+    color: var(--yellow);
+}
+
+.btn-launcher {
+    width: 193px;
+    height: 52px;
+    color: var(--bg-black);
+    background-color: var(--yellow);
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 40px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    line-height: 150%;
+}
+
+.btn-launcher:hover {
+    background-color: #f1a20b;
+}
+
+.menu-opcoes {
+    display: flex;
+    gap: 24px;
+}
+
+.btn-opcao {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--silver);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: var(--white);
+}
+
+.btn-opcao:hover {
+    color: var(--yellow);
+}
+
+.icon {
+    transition: fill 0.3s ease;
+}
+
+.gta6-banner {
+    width: 100%;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.games {
+    margin: 80px 140px;
+    width: 1160px;
+    height: 554.85px;
+}
+
+.container {
+    color: var(--white);
+    font-size: 3rem;
+    line-height: 150%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container2 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container2 img {
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.container2 img:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.mobile-devices {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.3s ease;
+}
+
+.pc {
+    width: 70px;
+    height: 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+    border-radius: 15px;
+    background-color: var(--tertiary);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.pc:hover {
+    color: var(--yellow);
+}
+
+.console {
+    width: 106px;
+    height: 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+    border-radius: 15px;
+    background-color: var(--tertiary);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.console:hover {
+    color: var(--yellow);
+}
+
+.dispositivos-portateis {
+    width: 196px;
+    height: 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+    border-radius: 15px;
+    background-color: var(--tertiary);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+.dispositivos-portateis:hover {
+    color: var(--yellow);
+}
+
+.btn-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 260px;
+    height: 63px;
+    background-color: var(--yellow);
+    color: var(--bg-black);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 150%;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn-view:hover {
+    background-color: #f1a20b;
+}
+
+.info {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.info h2 {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.info-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.bg-black {
+    background-color: var(--bg-black);
+    border-radius: 18px;
+    padding-bottom: 32px;
+    flex: none;
+    width: 860px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.bg-black:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.bg-black img {
+    width: 100%;
+    height: 352px;
+    object-fit: cover;
+    object-position: top center;
+    margin-bottom: 25px;
+}
+
+.bg-black h3 {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 32px;
+    margin-bottom: 8px;
+}
+
+.bg-black strong {
+    color: var(--secondary);
+    font-weight: 300;
+    font-size: 16px;
+    margin-left: 32px;
+}
+
+.bg-black strong:last-of-type {
+    margin-left: 12px;
+}
+
+.asides-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.asides-column aside {
+    width: 260px;
+    background-color: var(--bg-black);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.asides-column aside:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.asides-column aside img {
+    width: 100%;
+    height: 142px;
+    object-fit: cover;
+    object-position: top center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.asides-column aside h4 {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--white);
+    margin: 8px 0 4px 12px;
+    line-height: 150%;
+}
+
+.asides-column aside div {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+}
+
+.asides-column aside div strong {
+    font-size: 0.75rem;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.download {
+    display: flex;
+    justify-content: space-between;
+    margin: 112px auto;
+    gap: 20px;
+    max-width: 1160px;
+    height: 535px;
+    background-image: url(./img/fundo.png);
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.games-launcher {
+    display: flex;
+    align-items: center;
+    gap: 18.24px;
+    margin: 77px 81.79px 32px 76px;
+    width: 342.21px;
+}
+
+.games-launcher h5 {
+    font-size: 2.598125rem;
+    font-weight: 800;
+    line-height: 120%;
+}
+
+.download-launcher {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 76px;
+}
+
+.download-launcher p {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 150%;
+    width: 326px;
+    margin-bottom: 64px;
+}
+
+.download-launcher button {
+    width: 260px;
+    height: 63px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 150%;
+    border-radius: 8px;
+    color: var(--bg-black);
+    background-color: var(--yellow);
+    cursor: pointer;
+    border: none;
+}
+
+.download-launcher button:hover {
+    background-color: #f1a20b;
+}
+
+.buy-now img {
+    max-width: 660px;
+    position: relative;
+    object-fit: cover;
+    object-position: top center;
+    overflow: hidden;
+    top: 32px;
+    right: 39px;
+}
+
+footer {
+    width: 1440px;
+    height: 238px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+footer .logo2 {
+    margin-left: 140px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer-content ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.footer-content li a {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+footer ul li a:hover {
+    color: var(--yellow);
+}
+
+footer strong {
+    color: var(--primary);
+    font-size: 0.8125rem;
+    font-weight: 300;
+    line-height: 150%;
+    transition: color 0.5s ease;
+    cursor: pointer;
+}
+
+footer strong:hover {
+    color: var(--yellow);
+}
+
+.footer-icons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 140px;
+}
+
+.footer-icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.footer-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-icons img:hover {
+    filter: brightness(0) saturate(100%) invert(76%) sepia(39%) saturate(2556%) hue-rotate(359deg) brightness(101%) contrast(106%);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav .menu-list,
+    nav .btn-launcher,
+    nav .menu-opcoes {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+        background-color: #101010;
+        position: absolute;
+        top: 90px;
+        width: 100%;
+        padding: 20px;
+        z-index: 100;
+    }
+
+    .menu-mobile.open {
+        display: flex;
+    }
+
+    .btn-launcher {
+        white-space: nowrap;
+        display: inline-block;
+        flex-shrink: 0;
+    }
+
+    .gta6-banner {
+        width: 100%;
+    }
+
+}
